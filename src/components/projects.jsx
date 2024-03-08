@@ -15,8 +15,7 @@ import walmartparking from '../assets/projects/immigrantartcarousel/walmartparki
 import untitledpainting from '../assets/projects/immigrantartcarousel/untitledpainting.jpg'
 
 import eiffeltower from '../assets/projects/paris/eiffeltower.jpg'
-import notredame from '../assets/projects/paris/monalisa.jpg'
-import monalisa from '../assets/projects/paris/notredame.jpg'
+import notredame from '../assets/projects/paris/notredame.jpg'
 
 import washingtonpost from '../assets/projects/washingtonpost.png'
 
@@ -89,10 +88,9 @@ function Projects() {
             The Immigrant Art Expo empowers contributors to explore their identity and reclaim their narrative. 
             We will be printing an Immigrant Art Zine for all contributors near the end of Spring Quarter.
             </p>
-            <p>
-            A part of the Immigrant Art Expo will showcase in Cantor's Museum Night and Spring Arts Fair. 
-            </p><p><a href={"https://bit.ly/spring_museum_night"}>Rsvp</a> and join us in celebrating Immigrant Identity and Narratives at Stanford.
-            </p>
+            <p>A part of the Immigrant Art Expo will showcase in Cantor's Museum Night and Spring Arts Fair. </p>
+            <p><a href={"https://bit.ly/spring_museum_night"}>Rsvp</a> and join us in celebrating Immigrant Identity and Narratives at Stanford.</p>
+            <h4>View the Online Book <a href={"https://www.canva.com/design/DAFCTkVp-8o/l3q0edCGXZ3Aw6qAJvV6gA/edit?utm_content=DAFCTkVp-8o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"}>Here</a></h4>
             </Col>
         </Row>
         <Row>
@@ -171,13 +169,6 @@ function Projects() {
                     className="d-block w-100"
                     src={notredame}
                     alt="Abi in front of Notre Dame"
-                />
-                </Carousel.Item>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={monalisa}
-                    alt="Abi and brother in front of Mona Lisa"
                 />
                 </Carousel.Item>
             </Carousel>

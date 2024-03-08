@@ -1,5 +1,5 @@
 import React from "react";
-import abipic from '../assets/abiportrait.jpg'
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -10,6 +10,8 @@ import immigrantartexpo from '../assets/projects/stanfordimmigrantartexpo.jpg'
 import opaltometi from '../assets/projects/sig/opaltometi.jpg'
 import protagonistsinpolicy from '../assets/projects/sig/protagonistsinpolicy.png'
 import pupper from '../assets/resume/pupper.JPG'
+import abipic from '../assets/abiportrait.jpg'
+import resume2024 from '../assets/resume/resume2024.png'
 
 function Home() {
   return (
@@ -77,7 +79,22 @@ function Home() {
         </Carousel>
         </Container>
         </Row>
-    </Container>
+        <Row>
+        <Container style={{width: 1000, justifyContent: 'center'}} className="my-3">
+        <Link to="resume"><h2>View My Resume Here</h2></Link>
+        <Carousel variant="dark">
+            <Carousel.Item>
+            <img
+                    className="d-block w-100"
+                    src={resume2024}
+                    alt="Abi Lopez 2024 resume"
+                />
+            </Carousel.Item>
+          
+        </Carousel>
+        </Container>
+        </Row>
+        </Container>
     </div>
   );
 }

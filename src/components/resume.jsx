@@ -1,10 +1,16 @@
 import React from "react";
-import styled from 'styled-components';
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Accordion from 'react-bootstrap/Accordion'
-import resume from '../assets/resume/AbiLopez_Resume.pdf'
+import DocViewer from "react-doc-viewer";
+
+import resume2024 from '../assets/resume/resume2024.png'
+import resume2024pdf from '../assets/resume/AbiLopez_Resume_2024.pdf'
+import resume2021pdf from '../assets/resume/AbiLopez_Resume_2021.pdf'
+import resume2018 from '../assets/resume/resume2018.png'
+import resume2018pdf from '../assets/resume/AbiLopez_Resume_2018.pdf'
 import wapohack from '../assets/resume/wapohackathon.jpg'
 import tometiflyer from '../assets/resume/tometiflyer.JPG'
 import imaniflyer from '../assets/resume/imaniflyer.JPG'
@@ -14,6 +20,8 @@ import solidworks from '../assets/resume/solidworks.JPG'
 import inventor from '../assets/resume/inventor.JPG'
 import autocad from '../assets/resume/autocad.JPG'
 import nims from '../assets/resume/nims.jpeg'
+
+import styled from 'styled-components';
 
 const Styledul = styled.ul`
     list-style: none;
@@ -38,18 +46,40 @@ const Styledh5 = styled.h5`
 `;
 
 function Resume() {
+    const docs = [
+        { uri: "https://url-to-my-pdf.pdf" },
+        { uri: require('../assets/resume/AbiLopez_Resume_2024.pdf') }, // Local File
+        ];
     
   return (
     <div>
         <Container fluid style={{maxWidth: 1200}} className="justify-content-center pt-2">
+        <DocViewer documents={docs} />
+        <Container fluid>
+                <Row>
+                    <Col> 
+                    <Styledh3>Abi's Resume 2024</Styledh3>
+                    </Col>
+                    <Col>
+                    <a href={resume2024pdf}><Styledh4>Download my Resume 2024</Styledh4></a>
+                    </Col>
+                </Row>
+                <Row>
+                <img
+                    className="d-block w-100"
+                    src={resume2024}
+                    alt="Abi Lopez 2024 resume"
+                />
+                </Row>
+            </Container>
             <Container fluid>
                 <Row>
                     <Col> 
-                    <Styledh4>My Interactive Resume</Styledh4>
+                    <Styledh3>Abi's Interactive Resume 2021</Styledh3>
                     <Styledh4>Click on the arrow icons to see more!</Styledh4>
                     </Col>
                     <Col>
-                    <a href={resume}><Styledh4>Download my Resume</Styledh4></a>
+                    <a href={resume2021pdf}><Styledh4>Download my Resume 2021</Styledh4></a>
                     </Col>
                 </Row>
             </Container>
@@ -234,6 +264,23 @@ function Resume() {
                 </Row>
             </Container>
         </Container>
+        <Container fluid>
+                <Row>
+                    <Col> 
+                    <Styledh3>Abi's Resume 2018</Styledh3>
+                    </Col>
+                    <Col>
+                    <a href={resume2018pdf}><Styledh4>Download my Resume 2018</Styledh4></a>
+                    </Col>
+                </Row>
+                <Row>
+                <img
+                    className="d-block w-100"
+                    src={resume2018}
+                    alt="Abi Lopez 2018 resume"
+                />
+                </Row>
+            </Container>
     </div>
   );
 }
