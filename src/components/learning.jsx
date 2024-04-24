@@ -32,7 +32,7 @@ function Learning() {
               <Styledh4>Abi's College Path to Stanford University</Styledh4>
               </Col>
               <Col>
-              <a><Styledh4>Click Here to Learn More</Styledh4></a>
+              <a href="https://docs.google.com/presentation/d/12iTkl3NAgU9g1m5HcXXnC-m05cqCmFuRvCKEPyD5hfM/edit?usp=share_link"><Styledh4>Click Here to Learn More</Styledh4></a>
               </Col>
           </Row>
           <Row>
@@ -49,7 +49,7 @@ function Learning() {
               <Styledh4>Scholarships</Styledh4>
               </Col>
               <Col>
-              <a><Styledh4>How to write a compelling essay</Styledh4></a>
+              <a href="https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/"><Styledh4>How to write a compelling essay</Styledh4></a>
               </Col>
           </Row>
           <Row>

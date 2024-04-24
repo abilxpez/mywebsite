@@ -12,6 +12,8 @@ import protagonistsinpolicy from '../assets/projects/sig/protagonistsinpolicy.pn
 import pupper from '../assets/resume/pupper.JPG'
 import abipic from '../assets/abiportrait.jpg'
 import resume2024 from '../assets/resume/resume2024.png'
+import resume2021 from '../assets/resume/resume2021.png'
+import resume2018 from '../assets/resume/resume2018.png'
 
 function Home() {
   return (
@@ -90,7 +92,20 @@ function Home() {
                     alt="Abi Lopez 2024 resume"
                 />
             </Carousel.Item>
-          
+            <Carousel.Item>
+            <img
+                    className="d-block w-100"
+                    src={resume2021}
+                    alt="Abi Lopez 2021 resume"
+                />
+            </Carousel.Item>
+            <Carousel.Item>
+            <img
+                    className="d-block w-100"
+                    src={resume2018}
+                    alt="Abi Lopez 2018 resume"
+                />
+            </Carousel.Item>
         </Carousel>
         </Container>
         </Row>

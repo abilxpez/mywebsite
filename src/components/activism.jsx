@@ -14,11 +14,6 @@ import awaculturalphotoshoot from '../assets/projects/immigrantartcarousel/awacu
 import walmartparking from '../assets/projects/immigrantartcarousel/walmartparking.jpg'
 import untitledpainting from '../assets/projects/immigrantartcarousel/untitledpainting.jpg'
 
-import eiffeltower from '../assets/projects/paris/eiffeltower.jpg'
-import notredame from '../assets/projects/paris/notredame.jpg'
-
-import washingtonpost from '../assets/projects/washingtonpost.png'
-
 import opaltometi from '../assets/projects/sig/opaltometi.jpg'
 import opaltometiconversation from '../assets/projects/sig/opaltometiconversation.png'
 import blairimani from '../assets/projects/sig/blairimani.png'
@@ -29,9 +24,6 @@ import pathwaystopublicservice from '../assets/projects/sig/pathwaystopublicserv
 import protagonistsinpolicy from '../assets/projects/sig/protagonistsinpolicy.png'
 import youngjeanlee from '../assets/projects/sig/youngjeanlee.jpg'
 import anthonyromero from '../assets/projects/sig/anthonyromero.jpg'
-
-import humans from '../assets/projects/humans.jpg'
-import pullquote from '../assets/projects/pullquote.JPG'
 
 import undocumentedarticle from '../assets/projects/undocumentedarticle.jpg'
 
@@ -154,60 +146,6 @@ function Projects() {
       </Container>
         </Row>
 
-        <Row className="align-items-center my-5" >
-            <Col>
-            <Carousel variant="dark" style={{width: 500}}>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={eiffeltower}
-                    alt="Abi in front of Eiffel Tower"
-                />
-                </Carousel.Item>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={notredame}
-                    alt="Abi in front of Notre Dame"
-                />
-                </Carousel.Item>
-            </Carousel>
-            </Col>
-            <Col>
-            <Row>
-            <h2>Study Abroad in Paris</h2>
-            <h4>Fall Quarter 2021</h4>
-            <p>Being the first in my family to cross the Atlantic Ocean to pursue my passion in 
-            art, meant elevating my family name to new levels and showing my younger siblings and community 
-            how far we can go. I'm also proud to say I'm now fluent in three languages, Spanish, English, and French.</p>
-            <p>After a lot of hard work, my family and I saved enough money for my younger brother's plane ticket to Europe and 
-            I had the incredible opportunity to show him around Paris and Rome. I hope to one day invite my parents and younger siblings to Europe.</p>
-            </Row>
-            </Col>
-        </Row>
-
-        <Row className="align-items-center justify-content-md-center my-5">
-        <Col>
-        <h2>Washington Post Publishing Tools Team - Software Developer</h2>
-        <h4> Summer 2021</h4>
-        <p>
-        At the Washington Post, I learned how human-centered design and technology empowers the journalists who raise awareness and 
-        facilitate discussion around world news and human rights. As a programmer, I worked on new features that helped journalists 
-        add different visuals to their stories. I also shadowed my Product Manager and learned more about the product planning strategies 
-        used to decide which features the engineering teams should prioritize next to best meet the needs of journalists and advance their work.  
-        </p>
-        </Col>
-        <Col>
-        <Container>
-        <img
-            className="d-block mx-auto w-100"
-            src={washingtonpost}
-            alt="Washington Post Logo"
-            style={{maxWidth: 300, height: 'auto'}}
-        />
-        </Container>
-        </Col>
-        </Row>
 
         <Row className="align-items-center my-5">
         <Col>
@@ -314,37 +252,6 @@ function Projects() {
                 />
                 </Carousel.Item>
             </Carousel>
-            </Col>
-        </Row>
-
-        <Row className="align-items-center my-5">
-            <Col>
-            <Carousel variant="dark" style={{width: 500}}>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={humans}
-                    alt="HUmans of Stanford Website Page"
-                />
-                </Carousel.Item>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={pullquote}
-                    alt="Screenshot of Pull quote feature"
-                />
-                </Carousel.Item>
-            </Carousel>
-            </Col>
-            <Col>
-            <h2>The Stanford Daily - Programmer for Tech Team and Writer for Data Team </h2>
-            <h4>Junior and Senior Year</h4>
-            <p>Working closely with The Daily journalists, I develop new page layouts and features for website frontend, 
-                which is built in Next.js. As a part of the Data Team, I utilize data analysis to tell relevant stories 
-                about subjects I'm passionate about. I am a recipient of the 2021 and 2022 The Stanford Daily Opportunity 
-                Fellowship, which provides me a stipend to continue my work at The Daily and alleviate my financial burden at Stanford. 
-            </p>
-            <p>I've created a Humans of Stanford page where Stanford students would be highlighted for their contributions to the community and a new pull quote feature.</p>
             </Col>
         </Row>
 
