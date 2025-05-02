@@ -3,12 +3,10 @@ import React from "react";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Carousel from 'react-bootstrap/Carousel'
 import Accordion from 'react-bootstrap/Accordion'
 
 import resume2024 from '../assets/resume/resume2024.png'
 import resume2024pdf from '../assets/resume/AbiLopez_Resume_2024.pdf'
-import resume2021 from '../assets/resume/resume2021.png'
 import resume2021pdf from '../assets/resume/AbiLopez_Resume_2021.pdf'
 import resume2018 from '../assets/resume/resume2018.png'
 import resume2018pdf from '../assets/resume/AbiLopez_Resume_2018.pdf'
@@ -51,46 +49,20 @@ function Resume() {
   return (
     <div>
         <Container fluid style={{maxWidth: 1200}} class="justify-content-center pt-2">
-        <Container style={{width: 1000, justifyContent: 'center'}} className="my-3">
-        <Styledh3>Resumes</Styledh3>
-        <Carousel variant="dark">
-            <Carousel.Item>
-            <img
-                    className="d-block w-100"
-                    src={resume2024}
-                    alt="Abi Lopez 2024 resume"
-                />
-            </Carousel.Item>
-            <Carousel.Item>
-            <img
-                    className="d-block w-100"
-                    src={resume2021}
-                    alt="Abi Lopez 2021 resume"
-                />
-            </Carousel.Item>
-            <Carousel.Item>
-            <img
-                    className="d-block w-100"
-                    src={resume2018}
-                    alt="Abi Lopez 2018 resume"
-                />
-            </Carousel.Item>
-        </Carousel>
-        </Container>
         <Container fluid>
                 <Row>
                     <Col> 
-                    <Styledh3>Abi's Resume 2024</Styledh3>
+                    <Styledh3>Abi's Resume 2025</Styledh3>
                     </Col>
                     <Col>
-                    <a href={resume2024pdf}><Styledh4>Download my Resume 2024</Styledh4></a>
+                    <a href={resume2024pdf}><Styledh4>Download my Resume 2025</Styledh4></a>
                     </Col>
                 </Row>
                 <Row>
                 <img
                     class="d-block w-100"
                     src={resume2024}
-                    alt="Abi Lopez 2024 resume"
+                    alt="Abi Lopez 2025 resume"
                 />
                 </Row>
             </Container>

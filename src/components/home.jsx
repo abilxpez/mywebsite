@@ -48,7 +48,7 @@ function Home() {
 
         <Row>
         <Container style={{width: 1000, justifyContent: 'center'}} className="my-3">
-        <Link to="projects"><h2>View My Projects Here</h2></Link>
+        <Link to="portfolio"><h2>View My Projects Here</h2></Link>
         <Carousel variant="dark">
             <Carousel.Item>
             <img
