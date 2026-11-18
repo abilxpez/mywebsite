@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import { Routes, Route, Link } from "react-router-dom";
-import { Home, Resume, Portfolio, Art, Resources, Footer} from "./components";
+import { Home, Resume, Portfolio, Art, Footer} from "./components";
 
 function App() {
   return (
@@ -22,7 +22,6 @@ function App() {
                 <Link className="nav-link" to="resume"><h4>Resume</h4></Link>
                 <Link className="nav-link" to="portfolio"><h4>Portfolio</h4></Link>
                 <Link className="nav-link" to="art"><h4>Art</h4></Link>
-                <Link className="nav-link" to="resources"><h4>Resources</h4></Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -34,7 +33,6 @@ function App() {
             <Route path="resume" element={<Resume />} />
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="art" element={<Art />} />
-            <Route path="resources" element={<Resources />} />
           </Routes>
           </div>
         </Container>

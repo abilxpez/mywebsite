@@ -11,3 +11,9 @@ div {
   text-align: center;
   justify-content: center;
 }
+
+/* Use the tallest slide's aspect ratio at the carousel's current width. */
+.fixed-frame-carousel .carousel-item > img {
+  aspect-ratio: var(--slide-aspect-ratio);
+  object-fit: contain;
+}

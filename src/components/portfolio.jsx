@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel'
 import Row from 'react-bootstrap/Row'
@@ -14,21 +15,22 @@ import awaculturalphotoshoot from '../assets/projects/immigrantartcarousel/awacu
 import walmartparking from '../assets/projects/immigrantartcarousel/walmartparking.jpg'
 import untitledpainting from '../assets/projects/immigrantartcarousel/untitledpainting.jpg'
 
-import eiffeltower from '../assets/projects/paris/eiffeltower.jpg'
-import notredame from '../assets/projects/paris/notredame.jpg'
-
 import washingtonpost from '../assets/projects/washingtonpost.png'
+import inspiritAiLogo from '../assets/projects/inspiritai.webp'
+import ibmLogo from '../assets/projects/ibm.png'
+import stanfordLogo from '../assets/projects/stanford.png'
+import sfcuLogo from '../assets/projects/sfcu-logo-full.svg'
 
 import opaltometi from '../assets/projects/sig/opaltometi.jpg'
 import opaltometiconversation from '../assets/projects/sig/opaltometiconversation.png'
 import blairimani from '../assets/projects/sig/blairimani.png'
 import blairimanidebrief from '../assets/projects/sig/blairimanidebrief.jpg'
-import erikaandiola from '../assets/projects/sig/erikaandiola.jpg'
-import erikaandiolaqa from '../assets/projects/sig/erikaandiolaqa.png'
 import pathwaystopublicservice from '../assets/projects/sig/pathwaystopublicservice.jpg'
 import protagonistsinpolicy from '../assets/projects/sig/protagonistsinpolicy.png'
 import youngjeanlee from '../assets/projects/sig/youngjeanlee.jpg'
 import anthonyromero from '../assets/projects/sig/anthonyromero.jpg'
+import erikaandiola from '../assets/projects/sig/erikaandiola.jpg'
+import erikaandiolaqa from '../assets/projects/sig/erikaandiolaqa.png'
 
 import humans from '../assets/projects/humans.jpg'
 import pullquote from '../assets/projects/pullquote.JPG'
@@ -40,20 +42,225 @@ import iiba from '../assets/projects/iiba.png'
 
 import limanquote from '../assets/projects/limanquote.jpg'
 
-import pupper from '../assets/resume/pupper.JPG'
-import puppervideo from '../assets/resume/puppervideo.jpeg'
-
-import immigrationpolicydebate from '../assets/projects/immigrationpolicydebate.jpg'
-
-import txt from '../assets/projects/txt.png'
+import pupper from '../assets/projects/pupper.JPG'
+import puppervideo from '../assets/projects/puppervideo.jpeg'
 
 function Portfolio() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const heading = document.getElementById(location.hash.slice(1));
+    if (heading) {
+      heading.focus({ preventScroll: true });
+      heading.scrollIntoView();
+    }
+  }, [location]);
+
   return (
     <div className="projects">
     <Container fluid style={{maxWidth: 1200, justifyContent: 'center'}}>
-        <Row className="align-items-center">
-            <Col>
-            <Carousel variant="dark" style={{width: 500}}>
+      <nav aria-label="Portfolio sections" className="fs-3 fw-bold py-3">
+        <Link to="#engineering">Engineering</Link>
+        <span aria-hidden="true" className="mx-2">|</span>
+        <Link to="#community">Community</Link>
+      </nav>
+
+      <section aria-labelledby="engineering" className="mb-5">
+        <h2 id="engineering" tabIndex={-1} className="fs-1 fw-bold pt-2 mb-4">Engineering</h2>
+        <Row className="my-5">
+          <Col>
+            <h3 className="h2">Immigration Policy Tracking Project - AI Augmented Search</h3>
+            <h4>Winter and Spring 2026</h4>
+            <p>
+              I developed an AI-powered search engine for immigration policy research, combining keyword and semantic search to find and rank relevant documents.
+              I also trained a relevance model and organized results into confidence tiers for easier interpretation, while including supporting evidence and source references for transparency.
+              Finally, I optimized the search pipeline to improve performance, reducing search time from approximately 10 seconds to just 1 second.
+            </p>
+          </Col>
+        </Row>
+
+        <Row className="my-5">
+          <Col>
+            <h3 className="h2">Automated Red Teaming using Reinforcement Learning</h3>
+            <h4>Spring 2026</h4>
+            <p>
+              I developed an automated red-teaming framework in Python to study how AI models respond to evolving jailbreak attacks across multiple conversation turns.
+              Using reinforcement learning (PPO), I trained an attacker to learn and improve its prompt mutation strategies based on conversation history.
+              This increased attack success from 43.3% with random mutations to 60.0% with PPO, demonstrating the effectiveness of learned strategies.
+              I also explored attacker–victim adaptation in two settings: keeping the victim model fixed while the attacker continued learning, and keeping the attacker fixed while updating the victim's defenses through LoRA fine-tuning.
+              In the fixed-victim experiment, the adapting attacker reached a peak success rate of 68.8%.
+            </p>
+          </Col>
+        </Row>
+
+        <Row className="align-items-center justify-content-center g-4 my-5">
+          <Col xs={12} md>
+            <h3 className="h2">Computer Science Course Assistant, Stanford University</h3>
+            <h4>2024 to 2026</h4>
+            <p>
+              Supported professors across six consecutive quarters (two years) in three courses: probability, computer vision, and computer graphics, covering Bayesian inference, neural networks, and ray tracing.
+              In four probability quarters, I led twice-weekly sections of 20 students, explaining each week’s new and confusing concepts, working through three to four problems, and answering questions throughout.
+              I also ran four hours of office hours weekly, helping students with homework, course material, and final projects.
+            </p>
+          </Col>
+          <Col xs={8} sm={5} md={3}>
+            <img className="img-fluid" src={stanfordLogo} alt="Stanford University logo" />
+          </Col>
+        </Row>
+
+        <Row className="align-items-center justify-content-center g-4 my-5">
+          <Col xs={12} md>
+            <h3 className="h2">Full Stack Software Engineer, Stanford Federal Credit Union</h3>
+            <h4>2025</h4>
+            <p>
+              Built a full-stack digital banking enrollment app with React, Next.js, Node, and Express that unifies core-banking and Q2 services through REST, with schema validation, normalized errors, and idempotent retries.
+              It cut time to enroll by about 85%.
+              Staff can load members, review accounts, and complete enrollments from a single screen, with submit-time validation, quick username checks, and safeguards against duplicates and network failures that reduced failed attempts.
+              I also created a proof-of-concept “chat-to-SQL” assistant for safe, conversational data access, defining guardrails (schema-only, SELECT-only, masked fields) and a phased rollout plan.
+            </p>
+          </Col>
+          <Col xs={8} sm={5} md={{ span: 3, order: 'first' }}>
+            <img className="img-fluid" src={sfcuLogo} alt="Stanford Federal Credit Union logo" />
+          </Col>
+        </Row>
+
+        <Row className="align-items-center justify-content-center g-4 my-5">
+          <Col xs={12} md>
+            <h3 className="h2">Software Developer, IBM</h3>
+            <h4>2023</h4>
+            <p>
+              Designed and developed a full-stack web application that visualizes hardware storage structure and capacity, helping users manage and optimize storage.
+              It was built with React, Express, Node.js, Axios, and the z/OSMF REST API.
+              I expanded a REXX script that formats memory hex dumps into the corresponding PL/X control block mapping, improving readability and reducing debugging time for the DFSMS VSAM/RLS team.
+              I also wrote a flexible build bash script for the team’s Jenkins pipeline, with accurate parameter parsing and validation.
+            </p>
+          </Col>
+          <Col xs={8} sm={5} md={3}>
+            <img className="img-fluid" src={ibmLogo} alt="IBM logo" />
+          </Col>
+        </Row>
+
+        <Row className="align-items-center justify-content-center g-4 my-5">
+          <Col xs={12} md>
+            <h3 className="h2">Inspirit AI - Instructor</h3>
+            <h4>2022–2024</h4>
+            <p>
+              Taught an artificial intelligence curriculum to over 100 high school students, covering linear and logistic regression, natural language processing, and convolutional neural networks.
+              I built over 20 machine learning models in Python using libraries like TensorFlow, scikit-learn, Keras, and GloVe, and led 10 AI projects with social good applications, from assessing bias in the justice system to detecting pneumonia from X-ray scans.
+            </p>
+          </Col>
+          <Col xs={8} sm={5} md={{ span: 3, order: 'first' }}>
+            <img className="img-fluid" src={inspiritAiLogo} alt="Inspirit AI logo" />
+          </Col>
+        </Row>
+
+        <Row className="align-items-center justify-content-md-center mb-5 gy-4 gy-md-0">
+        <Col xs={12} md={6}>
+        <h3 className="h2">Washington Post Publishing Tools Team - Software Developer</h3>
+        <h4> Summer 2021</h4>
+        <p>
+        At the Washington Post, I learned how human-centered design and technology empowers the journalists who raise awareness and
+        facilitate discussion around world news and human rights. As a programmer, I worked on new features that helped journalists
+        add different visuals to their stories. I also shadowed my Product Manager and learned more about the product planning strategies
+        used to decide which features the engineering teams should prioritize next to best meet the needs of journalists and advance their work.
+        </p>
+        </Col>
+        <Col xs={12} md={6}>
+        <Container>
+        <img
+            className="d-block mx-auto w-100"
+            src={washingtonpost}
+            alt="Washington Post Logo"
+            style={{maxWidth: 300, height: 'auto'}}
+        />
+        </Container>
+        </Col>
+        </Row>
+
+        <Row className="align-items-center my-5 gy-4 gy-md-0">
+            <Col xs={12} md={6}>
+            <h3 className="h2">The Stanford Daily - Programmer for Tech Team and Writer for Data Team </h3>
+            <h4>Junior and Senior Year</h4>
+            <p>Working closely with The Daily journalists, I develop new page layouts and features for website frontend,
+                which is built in Next.js. As a part of the Data Team, I utilize data analysis to tell relevant stories
+                about subjects I'm passionate about. I am a recipient of the 2021 and 2022 The Stanford Daily Opportunity
+                Fellowship, which provides me a stipend to continue my work at The Daily and alleviate my financial burden at Stanford.
+            </p>
+            <p>I've created a Humans of Stanford page where Stanford students would be highlighted for their contributions to the community and a new pull quote feature.</p>
+            </Col>
+            <Col xs={12} md={6} className="order-md-first">
+            <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '881 / 1371'}}>
+                <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={humans}
+                    alt="HUmans of Stanford Website Page"
+                />
+                </Carousel.Item>
+                <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={pullquote}
+                    alt="Screenshot of Pull quote feature"
+                />
+                </Carousel.Item>
+            </Carousel>
+            </Col>
+        </Row>
+
+        <Row className="align-items-center my-5 gy-4 gy-md-0">
+            <Col xs={12} md={6}>
+            <h3 className="h2">Created Website for Pupper Robot to Increase Accessibility</h3>
+            <h4>Spring 2020</h4>
+            <p>Created a Read the Docs website to make Stanford's open-source Pupper robot easier for beginners to build.
+              The website documents everything needed to build the robot,
+                including a detailed parts list, how to download the code, and step-by-step videos that I recorded and uploaded to YouTube.
+                Our goal with Pupper's low-cost, simple design is to promote engagement for children K-12 and people new to robotics and
+                after the website was launched we saw results. Traffic on the website was in the thousands and people on Youtube and Twitter posted about Pupper.
+            </p>
+            <a href={"https://pupper.readthedocs.io/en/latest/"}>See Pupper Website Here</a> <br/>
+            <a href={"https://www.youtube.com/playlist?list=PLxFq1fXvP5VTbxuMm4moAiG0zeOiPejZ6"}>Watch Pupper How-To YouTube Videos Here</a>
+            </Col>
+            <Col xs={12} md={6} className="order-md-first">
+            <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '2196 / 1603'}}>
+                <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={pupper}
+                    alt="Screenshot of Pupper Website"
+                />
+                </Carousel.Item>
+                <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={puppervideo}
+                    alt="Screenshot of Pupper Tutorial Video"
+                />
+                </Carousel.Item>
+            </Carousel>
+            </Col>
+        </Row>
+      </section>
+      <section aria-labelledby="community" className="mb-5">
+        <h2 id="community" tabIndex={-1} className="fs-1 fw-bold pt-2 mb-4">Community</h2>
+        <Row className="align-items-center gy-4 gy-md-0">
+            <Col xs={12} md={6}>
+            <h3 className="h2 font-weight-light">Exploring Immigrant Identity Through Art</h3>
+            <h4>Winter and Spring 2022</h4>
+            <p>
+            The Immigrant Art Expo is a collection of art created by members of the Stanford community
+            to explore their immigrant identity. The collection includes poems, essays, paintings, performances,
+            and sculptures that share community narratives from many immigrant backgrounds.This expo creates space
+            for important discourse and encourages viewers to reimagine identity and immigration. More importantly,
+            The Immigrant Art Expo empowers contributors to explore their identity and reclaim their narrative.
+            We printed an Immigrant Art Zine for all contributors before the end of the Spring Quarter.
+            </p>
+            <p>
+            A part of the Immigrant Art Expo will showcase in Cantor's Museum Night and Spring Arts Fair.
+            </p>
+            </Col>
+            <Col xs={12} md={6} className="order-md-first">
+            <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '1587 / 2245'}}>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
@@ -77,27 +284,12 @@ function Portfolio() {
                 </Carousel.Item>
             </Carousel>
             </Col>
-            <Col>
-            <h2 className="font-weight-light">Exploring Immigrant Identity Through Art</h2>
-            <h4>Winter and Spring 2022</h4>
-            <p>
-            The Immigrant Art Expo is a collection of art created by members of the Stanford community 
-            to explore their immigrant identity. The collection includes poems, essays, paintings, performances, 
-            and sculptures that share community narratives from many immigrant backgrounds.This expo creates space 
-            for important discourse and encourages viewers to reimagine identity and immigration. More importantly, 
-            The Immigrant Art Expo empowers contributors to explore their identity and reclaim their narrative. 
-            We will be printing an Immigrant Art Zine for all contributors near the end of Spring Quarter.
-            </p>
-            <p>
-            A part of the Immigrant Art Expo will showcase in Cantor's Museum Night and Spring Arts Fair. 
-            </p><p><a href={"https://bit.ly/spring_museum_night"}>Rsvp</a> and join us in celebrating Immigrant Identity and Narratives at Stanford.
-            </p>
-            </Col>
         </Row>
+
         <Row>
-        <Container style={{width: 1000, justifyContent: 'center'}} className="my-3">
-        <h4>View the rest of the Immigrant Art Expo <a href={"https://abieiden.github.io/capstone/"}>Here</a></h4>
-        <Carousel variant="dark">
+        <Container style={{maxWidth: 1000}} className="my-3">
+        <h4>View the rest of the Immigrant Art Expo <a href={"https://abilxpez.github.io/capstone/"}>Here</a></h4>
+        <Carousel variant="dark" className="fixed-frame-carousel" style={{'--slide-aspect-ratio': '4077 / 3262'}}>
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -155,64 +347,19 @@ function Portfolio() {
       </Container>
         </Row>
 
-        <Row className="align-items-center my-5" >
-            <Col>
-            <Carousel variant="dark" style={{width: 500}}>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={eiffeltower}
-                    alt="Abi in front of Eiffel Tower"
-                />
-                </Carousel.Item>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={notredame}
-                    alt="Abi in front of Notre Dame"
-                />
-                </Carousel.Item>
-            </Carousel>
-            </Col>
-            <Col>
-            <Row>
-            <h2>Study Abroad in Paris</h2>
-            <h4>Fall Quarter 2021</h4>
-            <p>Being the first in my family to cross the Atlantic Ocean to pursue my passion in 
-            art, meant elevating my family name to new levels and showing my younger siblings and community 
-            how far we can go. I'm also proud to say I'm now fluent in three languages, Spanish, English, and French.</p>
-            <p>After a lot of hard work, my family and I saved enough money for my younger brother's plane ticket to Europe and 
-            I had the incredible opportunity to show him around Paris and Rome. I hope to one day invite my parents and younger siblings to Europe.</p>
-            </Row>
-            </Col>
-        </Row>
-
-        <Row className="align-items-center justify-content-md-center my-5">
-        <Col>
-        <h2>Washington Post Publishing Tools Team - Software Developer</h2>
-        <h4> Summer 2021</h4>
-        <p>
-        At the Washington Post, I learned how human-centered design and technology empowers the journalists who raise awareness and 
-        facilitate discussion around world news and human rights. As a programmer, I worked on new features that helped journalists 
-        add different visuals to their stories. I also shadowed my Product Manager and learned more about the product planning strategies 
-        used to decide which features the engineering teams should prioritize next to best meet the needs of journalists and advance their work.  
-        </p>
+        <Row className="align-items-center my-5 gy-4 gy-md-0">
+        <Col xs={12} md={6}>
+            <h3 className="h2">Brought BLM Leaders to Campus</h3>
+            <h4>Fall 2020</h4>
+            <p>Collaborating with more than 20 clubs and organizations across campus, I led a cross-campus effort to bring Ayo
+                (FKA Opal) Tometi, #BlackLivesMatter Co-Founder, and Blair Imani,  founder of Equality for HER. In an effort to
+                center under-represented minorities and encourage discussion, I also worked with community centers to host debriefs
+                after the talks. The Black Community Services Center hosted a conversation with Ayo Tometi, and
+                Queer Salam and the Queer Resources Center held a debrief after Blair Imani's talk.</p>
+                <a href={"https://stanforddaily.com/2020/11/10/black-lives-matter-co-founder-opal-tometi-says-structural-change-is-essential-for-black-liberation/"}>Read Stanford Daily article written on the Opal Tometi event.</a>
         </Col>
-        <Col>
-        <Container>
-        <img
-            className="d-block mx-auto w-100"
-            src={washingtonpost}
-            alt="Washington Post Logo"
-            style={{maxWidth: 300, height: 'auto'}}
-        />
-        </Container>
-        </Col>
-        </Row>
-
-        <Row className="align-items-center my-5">
-        <Col>
-        <Carousel variant="dark" style={{width: 500}}>
+        <Col xs={12} md={6} className="order-md-first">
+        <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '205 / 266'}}>
             <Carousel.Item>
             <img
                 className="d-block w-100"
@@ -241,51 +388,26 @@ function Portfolio() {
                 alt="Blair Imani Debrief Flyer"
             />
             </Carousel.Item>
-            <Carousel.Item>
-            <img
-                className="d-block w-100"
-                src={erikaandiola}
-                alt="Erika Andiola Talk Flyer"
-            />
-            </Carousel.Item>
-            <Carousel.Item>
-            <img
-                className="d-block w-100"
-                src={erikaandiolaqa}
-                alt="Erika Andiola QA Flyer"
-            />
-            </Carousel.Item>
         </Carousel>
         </Col>
-        <Col>
-            <h2>Brought BLM leaders to Campus</h2>
-            <h4>Fall 2020</h4>
-            <p>Collaborating with more than 20 clubs and organizations across campus, I led a cross-campus effort to bring Ayo 
-                (FKA Opal) Tometi, #BlackLivesMatter Co-Founder, and Blair Imani,  founder of Equality for HER. In an effort to 
-                center under-represented minorities and encourage discussion, I also worked with community centers to host debriefs 
-                after the talks. The Black Community Services Center hosted a conversation with Ayo Tometi, 
-                Queer Salam and the Queer Resources Cneter held a derbief after Blair Imani's talk, and El Centro Chicano y 
-                Latino had a Q&A after Erika Andiola, the Chief Advocacy Officer for The Refugee and Immigrant Center for Education and 
-                Legal Services (RAICES), talked at Stanford.  </p> 
-                <a href={"https://stanforddaily.com/2020/11/10/black-lives-matter-co-founder-opal-tometi-says-structural-change-is-essential-for-black-liberation/"}>Read Stanford Daily article written on the Opal Tometi event.</a> 
-        </Col> 
         </Row>
 
-        <Row className="align-items-center my-5">
-            <Col>
-                <h2>Organized Diverse Speaker Series Courses</h2>
+        <Row className="align-items-center my-5 gy-4 gy-md-0">
+            <Col xs={12} md={6}>
+                <h3 className="h2">Organized Diverse Speaker Series Courses</h3>
                 <h4>Fall 2020 and Winter 2021</h4>
                 <p>
-                Recently elected as the Co-Director for Policy Dinners in Stanford in Government, I wanted to use my platform to uplift marginalized voices. 
-                Organizing the class series,  POLISCI 74: Pathways to Public Service and POLISCI 76: Protagonists in Policy, I made it a priority to invite 
-                speakers from diverse backgrounds and identities. Our line-up of speakers included Anthony Romero, the first Latino and openly gay man to serve 
-                as Executive Director of the ACLU, Young Jean Lee, the first Asian-American woman to have her play produced on Broadway, Kristin Clarke, 
-                President of the Lawyers' Committee for Civil Rights under Law, and Nanette Barragan, the first Latina to represent California's 44th 
-                Congressional district in the House. 
+                Recently elected as the Co-Director for Policy Dinners in Stanford in Government, I wanted to use my platform to uplift marginalized voices.
+                Organizing the class series,  POLISCI 74: Pathways to Public Service and POLISCI 76: Protagonists in Policy, I made it a priority to invite
+                speakers from diverse backgrounds and identities. Our line-up of speakers included Anthony Romero, the first Latino and openly gay man to serve
+                as Executive Director of the ACLU, Young Jean Lee, the first Asian-American woman to have her play produced on Broadway, Kristen Clarke,
+                President of the Lawyers' Committee for Civil Rights under Law, and Nanette Barragan, the first Latina to represent California's 44th
+                Congressional district in the House.
+                We also welcomed Erika Andiola, Chief Advocacy Officer for the Refugee and Immigrant Center for Education and Legal Services (RAICES), and El Centro Chicano y Latino hosted a Q&A after her talk.
                 </p>
             </Col>
-            <Col>
-            <Carousel variant="dark" style={{width: 500}}>
+            <Col xs={12} md={6}>
+            <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '409 / 531'}}>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
@@ -314,55 +436,37 @@ function Portfolio() {
                     alt="Young Jean Lee Talk Flyer"
                 />
                 </Carousel.Item>
-            </Carousel>
-            </Col>
-        </Row>
-
-        <Row className="align-items-center my-5">
-            <Col>
-            <Carousel variant="dark" style={{width: 500}}>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={humans}
-                    alt="HUmans of Stanford Website Page"
+                    src={erikaandiola}
+                    alt="Erika Andiola Talk Flyer"
                 />
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={pullquote}
-                    alt="Screenshot of Pull quote feature"
+                    src={erikaandiolaqa}
+                    alt="Erika Andiola Q&A Flyer"
                 />
                 </Carousel.Item>
             </Carousel>
             </Col>
-            <Col>
-            <h2>The Stanford Daily - Programmer for Tech Team and Writer for Data Team </h2>
-            <h4>Junior and Senior Year</h4>
-            <p>Working closely with The Daily journalists, I develop new page layouts and features for website frontend, 
-                which is built in Next.js. As a part of the Data Team, I utilize data analysis to tell relevant stories 
-                about subjects I'm passionate about. I am a recipient of the 2021 and 2022 The Stanford Daily Opportunity 
-                Fellowship, which provides me a stipend to continue my work at The Daily and alleviate my financial burden at Stanford. 
-            </p>
-            <p>I've created a Humans of Stanford page where Stanford students would be highlighted for their contributions to the community and a new pull quote feature.</p>
-            </Col>
         </Row>
 
-        <Row className="align-items-center my-5">
-            <Col>
-            <h2>Helped the Student Immigrant Empowerment Project at Stanford (SIEPS) Bring Awareness to Undocumeneted Student Experience</h2>
+        <Row className="align-items-center my-5 gy-4 gy-md-0">
+            <Col xs={12} md={6}>
+            <h3 className="h2">Helped the Student Immigrant Empowerment Project at Stanford (SIEPS) Bring Awareness to Undocumented Student Experience</h3>
             <h4>August 26th, 2020</h4>
-            <p>After the Trump Administration stopped accepting new DACA applications and limited DACA protections with the July 28th, 2020 DHS statement, I wanted to 
-            leverage my experience at IIBA to bring awareness to the undocumented student experience at Stanford and call for more resources and support for undocumented 
-            students. Working with the Student Immigrant Empowerment Project at Stanford (SIEPS), we gathered undocumented student narratives at Stanford and published an 
-            opinion piece with the Stanford Daily titled "Letter to the community: Undocumented students are hurting." We were successful in starting important discussions 
-            around campus and meeting with University officials to get more campus support, including gaining access to the <a href={"https://undocumented.stanford.edu/"}>undocumented.stanford.edu </a> 
+            <p>After the July 28th, 2020 DHS statement limiting DACA protections, I wanted to help bring awareness to the undocumented student experience at Stanford and advocate for more campus resources.
+            Working with the Student Immigrant Empowerment Project at Stanford (SIEPS), we gathered undocumented student narratives at Stanford and published an
+            opinion piece with the Stanford Daily titled "Letter to the community: Undocumented students are hurting." We were successful in starting important discussions
+            around campus and meeting with University officials to get more campus support, including gaining access to the <a href={"https://undocumented.stanford.edu/"}>undocumented.stanford.edu </a>
               website, where SIEPS was able to add more necessary resources.
             </p>
-            <a href={"https://stanforddaily.com/2020/08/26/letter-to-the-community-undocumented-students-are-hurting/"}>Read the Article Here</a> 
+            <a href={"https://stanforddaily.com/2020/08/26/letter-to-the-community-undocumented-students-are-hurting/"}>Read the Article Here</a>
             </Col>
-            <Col>
+            <Col xs={12} md={6}>
             <img
                 className="d-block w-100"
                 src={undocumentedarticle}
@@ -371,8 +475,15 @@ function Portfolio() {
             </Col>
         </Row>
 
-        <Row className="align-items-center my-5">
-        <Col>
+        <Row className="align-items-center my-5 gy-4 gy-md-0">
+        <Col xs={12} md={6}>
+        <h3 className="h2">Helped Refugees Apply for Asylum</h3>
+        <h4>February 7-9, 2020 </h4>
+        <p>Traveled with Stanford Law School students to Tijuana, Mexico to help refugees apply for asylum. Volunteered with Al Otro Lado, a bi-national
+            advocacy and legal aid organization, and translated refugee's stories to help lawyers complete the Form I-589, Application for Asylum and for
+            Withholding of Removal, during the Remain in Mexico Policy.</p>
+        </Col>
+        <Col xs={12} md={6} className="order-md-first">
         <Container>
         <img
             className="d-block mx-auto w-100"
@@ -382,30 +493,23 @@ function Portfolio() {
         />
         </Container>
         </Col>
-        <Col>
-        <h2>Helped Refugees Apply for Asylum</h2>
-        <h4>February 7-9, 2020 </h4>
-        <p>Traveled with Stanford Law School students to Tijuana, Mexico to help refugees apply for asylum. Volunteered with Al Otro Lado, a bi-national 
-            advocacy and legal aid organization, and translated refugee's stories to help lawyers complete the Form I-589, Application for Asylum and for 
-            Withholding of Removal, during Trump's Remain in Mexico Policy.</p>
-        </Col>
         </Row>
 
-        <Row className="align-items-center my-5">
-        <Col>
-        <h2>Helped Survivors of Domestic Violence Apply for US Visas</h2>
+        <Row className="align-items-center my-5 gy-4 gy-md-0">
+        <Col xs={12} md={6}>
+        <h3 className="h2">Helped Survivors of Domestic Violence Apply for US Visas</h3>
         <h4>Winter and Summer 2020</h4>
-        <p>I volunteered every Friday in Winter Quarter at the Immigration Institute of the Bay Area (IIBA) to complete a declaration for a U Visa Petition Process. 
-            Immigrants applying for a Petition for U Nonimmigrant Status were survivors of criminal activity, usually domestic violence, in the United States and I would hear their stories 
-            in Spanish and translate it to English. I was awarded the Public Interest Law Fellowship and the Yale Law School <a href={"https://law.yale.edu/centers-workshops/arthur-liman-center-public-interest-law/summer-fellowship/"}>Liman Summer Fellowship</a> to 
-            continute my work at IIBA. At IIBA, I provided assistance to 6 lawyers with U Visa,
-            and VAWA, Violence Against Women Act Petition Processes. With VAWA petitions, I heard stories from survivors of domestic violence and completed their declaration. 
-            I completed around 2 or 3 declarations per week which translated to about 10-20 pages. I also worked on DACA renewals as the Trump administration limited DACA 
-            with the July 28th DHS statement. Moreover, I completed a Country Conditions research project, translated hundreds of legal documents, and worked daily with 
-            clients, scheduling appointments and answering legal questions under the guidance of a lawyer.
+        <p>
+            I volunteered every Friday during Winter Quarter at the Immigration Institute of the Bay Area (IIBA) to complete declarations for U Visa petitions.
+            Immigrants applying for U Nonimmigrant Status are survivors of criminal activity, usually domestic violence, and I heard their stories in Spanish and translated them into English.
+            I was awarded the Public Interest Law Fellowship and the Yale Law School <a href="https://law.yale.edu/centers-workshops/arthur-liman-center-public-interest-law/summer-fellowship/">Liman Summer Fellowship</a> to continue my work at IIBA.
+            There, I assisted six lawyers with U Visa and Violence Against Women Act (VAWA) petitions.
+            For VAWA petitions, I heard stories from survivors of domestic violence and completed their declarations, about two to three per week, or 10 to 20 pages.
+            I also worked on DACA renewals after the July 28th DHS statement limited DACA protections.
+            In addition, I completed a country conditions research project, translated hundreds of legal documents, and worked daily with clients, scheduling appointments and answering legal questions under the guidance of a lawyer.
         </p>
         </Col>
-        <Col>
+        <Col xs={12} md={6}>
         <img
             className="d-block w-100"
             src={iiba}
@@ -415,89 +519,19 @@ function Portfolio() {
         </Row>
 
         <Row className="align-items-center my-5">
-        <img
-            className="d-block w-100"
-            src={limanquote}
-            alt="Quote in Liman Center Report"
-        />
-        <p>Quoted in 2020 Liman Center Annual Report</p>
-        <a href={"https://law.yale.edu/sites/default/files/area/center/liman/2020_the_liman_center_reports.pdf"}>Read the Full Report Here</a>  
+          <Col xs={12}>
+            <p>Quoted in 2020 Liman Center Annual Report</p>
+            <a href={"https://law.yale.edu/sites/default/files/area/center/liman/2020_the_liman_center_reports.pdf"}>Read the Full Report Here</a>
+          </Col>
+          <Col xs={12} className="order-md-first">
+            <img
+                className="d-block w-100"
+                src={limanquote}
+                alt="Quote in Liman Center Report"
+            />
+          </Col>
         </Row>
-
-        <Row className="align-items-center my-5">
-            <Col>
-            <Carousel variant="dark" style={{width: 500}}>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={pupper}
-                    alt="Screenshot of Pupper Website"
-                />
-                </Carousel.Item>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={puppervideo}
-                    alt="Screenshot of Pupper Tutorial Video"
-                />
-                </Carousel.Item>
-            </Carousel>
-            </Col>
-            <Col>
-            <h2>Created Website for Pupper Robot to Increase Accessibility</h2>
-            <h4>Spring 2020</h4> 
-            <p>Reflecting on my own experience and difficulties as a beginner in Robotics, I decided to create a ReadtheDocs website to 
-                increase accessibility to our open-source Stanford Pupper robot. The website documents everything needed to build the robot, 
-                including a detailed parts list, how to download the code, and step-by-step videos that I recorded and uploaded to YouTube. 
-                Our goal with Pupper's low-cost, simple design is to promote engagement for children K-12 and people new to robotics and 
-                after the website was launched we saw results. Traffic on the website was in the thousands and people on Youtube and Twitter posted about Pupper. 
-            </p>
-            <a href={"https://pupper.readthedocs.io/en/latest/"}>See Pupper Website Here</a> <br/>
-            <a href={"https://www.youtube.com/playlist?list=PLxFq1fXvP5VTbxuMm4moAiG0zeOiPejZ6"}>Watch Pupper How-To YouTube Videos Here</a> 
-            </Col>
-        </Row>
-
-        <Row className="align-items-center my-5">
-        <Col>
-        <h2>Immigration Policy Debate</h2>
-        <h4>January 22nd, 2020</h4>
-        <p>With the upcoming election later that year, I felt it was imperative to talk about the border crisis and explore 
-            the different immigration policies of the Democratic and Republican party. Organizing with Stanford in Government, 
-            we invited the Stanford College Republicans and the Stanford Democrats to debate the immigrant policies of their 
-            respective parties. Unfortunately, the Stanford College Republicans took this opportunity to use hurtful language 
-            and spread hateful speech, but it was very reflective of Trump's own rhetoric. The debate served to highlight the 
-            divisions in perspective and sentiment regarding immigration in our country and at Stanford.
-        </p>
-        </Col>
-        <Col>
-        <img
-            className="d-block w-100"
-            src={immigrationpolicydebate}
-            alt="Immigration Policy Debate Flyer"
-        />
-        </Col>
-        </Row>
-
-        <Row className="align-items-center my-5">
-        <Col>
-        <img
-            className="d-block w-100"
-            src={txt}
-            alt="TXT Poster Board"
-        />
-        </Col>
-        <Col>
-        <h2>TXT: Teens Exploring Technology Scrum Master</h2>
-        <h4>Summer 2019</h4>
-        <p>With the support of the Haas Center, I interned at TXT: Teens Exploring Technology the summer after my freshman year. At TXT, we mentored 
-            boys from the low-income community of South Central LA in coding, business development, design thinking, youth development, and many other 
-            life skills. I taught HTML, CSS, and Python to the students and led a team of four boys to develop an app they would pitch to investors at 
-            the end of the program. Then, I was promoted to scrum master of the program and I helped each team develop their app, solved bugs in their 
-            code, and created Code Documentations explaining the apps' purpose, the features, API's used, and general functionality.
-        </p>
-        </Col>
-        </Row>
-
+      </section>
     </Container>
     </div>
   );
