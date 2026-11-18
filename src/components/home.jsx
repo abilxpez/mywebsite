@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Carousel from 'react-bootstrap/Carousel'
 import { Link } from "react-router-dom";
+import { ResumePreview } from './resume';
 
 import immigrantartexpo from '../assets/projects/stanfordimmigrantartexpo.jpg'
 import opaltometi from '../assets/projects/sig/opaltometi.jpg'
@@ -70,6 +71,7 @@ function Home() {
         <Row>
         <Container style={{maxWidth: 1000}} className="my-3">
         <Link to="resume"><h2>View My Resume Here</h2></Link>
+        <ResumePreview maxWidth={680} />
         </Container>
         </Row>
         </Container>
