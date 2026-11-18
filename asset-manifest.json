@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mywebsite/static/css/main.83a3d851.css",
-    "main.js": "/mywebsite/static/js/main.c2972076.js",
+    "main.js": "/mywebsite/static/js/main.843367bb.js",
     "static/js/787.71e672d5.chunk.js": "/mywebsite/static/js/787.71e672d5.chunk.js",
     "static/media/walmartparking.jpg": "/mywebsite/static/media/walmartparking.17fb97e000f6a1e3c3d0.jpg",
     "static/media/awaculturalphotoshoot.jpg": "/mywebsite/static/media/awaculturalphotoshoot.03fa27727b75a4eb8bd8.jpg",
@@ -16,6 +16,7 @@
     "static/media/opaltometiconversation.png": "/mywebsite/static/media/opaltometiconversation.7927242b95ce7518b5b1.png",
     "static/media/erikaandiolaqa.png": "/mywebsite/static/media/erikaandiolaqa.912d94c2a85a4f893c91.png",
     "static/media/protagonistsinpolicy.png": "/mywebsite/static/media/protagonistsinpolicy.a02a944f9c2bcaf90320.png",
+    "static/media/AbiLopez_Resume_2026.png": "/mywebsite/static/media/AbiLopez_Resume_2026.992642347e837d6d42c1.png",
     "static/media/untitledpainting.jpg": "/mywebsite/static/media/untitledpainting.a74c558dc972b8aaf649.jpg",
     "static/media/abiportrait.jpg": "/mywebsite/static/media/abiportrait.58fbc91ac68ebf2f14fc.jpg",
     "static/media/humans.jpg": "/mywebsite/static/media/humans.d4cf5ccfd1b04f79c4a4.jpg",
@@ -32,6 +33,7 @@
     "static/media/pathwaystopublicservice.jpg": "/mywebsite/static/media/pathwaystopublicservice.9fc1d6b7d1469a3dd540.jpg",
     "static/media/cantorflyerback.jpg": "/mywebsite/static/media/cantorflyerback.5d43c679fa24c68ddebf.jpg",
     "static/media/alotrolado.png": "/mywebsite/static/media/alotrolado.aa5cd837a36e30871987.png",
+    "static/media/AbiLopez_Resume_2026.pdf": "/mywebsite/static/media/AbiLopez_Resume_2026.bc5128746af8c493c1c3.pdf",
     "static/media/suenosalatardecer.jpg": "/mywebsite/static/media/suenosalatardecer.1daa0ee67cd91649299b.jpg",
     "static/media/pullquote.JPG": "/mywebsite/static/media/pullquote.e17700622c57fd73ff10.JPG",
     "static/media/iiba.png": "/mywebsite/static/media/iiba.8c7d469c4bc686a62450.png",
@@ -42,11 +44,11 @@
     "static/media/ibm.png": "/mywebsite/static/media/ibm.c2fed2ef837cf4241aba.png",
     "index.html": "/mywebsite/index.html",
     "main.83a3d851.css.map": "/mywebsite/static/css/main.83a3d851.css.map",
-    "main.c2972076.js.map": "/mywebsite/static/js/main.c2972076.js.map",
+    "main.843367bb.js.map": "/mywebsite/static/js/main.843367bb.js.map",
     "787.71e672d5.chunk.js.map": "/mywebsite/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83a3d851.css",
-    "static/js/main.c2972076.js"
+    "static/js/main.843367bb.js"
   ]
 }
