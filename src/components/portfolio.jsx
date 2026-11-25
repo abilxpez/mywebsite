@@ -103,7 +103,7 @@ function Portfolio() {
               I also ran four hours of office hours weekly, helping students with homework, course material, and final projects.
             </p>
           </Col>
-          <Col xs={8} sm={5} md={3}>
+          <Col xs={8} sm={5} md={3} className="order-first order-md-0">
             <img className="img-fluid" src={stanfordLogo} alt="Stanford University logo" />
           </Col>
         </Row>
@@ -119,7 +119,7 @@ function Portfolio() {
               I also created a proof-of-concept “chat-to-SQL” assistant for safe, conversational data access, defining guardrails (schema-only, SELECT-only, masked fields) and a phased rollout plan.
             </p>
           </Col>
-          <Col xs={8} sm={5} md={{ span: 3, order: 'first' }}>
+          <Col xs={8} sm={5} md={3} className="order-first">
             <img className="img-fluid" src={sfcuLogo} alt="Stanford Federal Credit Union logo" />
           </Col>
         </Row>
@@ -135,7 +135,7 @@ function Portfolio() {
               I also wrote a flexible build bash script for the team’s Jenkins pipeline, with accurate parameter parsing and validation.
             </p>
           </Col>
-          <Col xs={8} sm={5} md={3}>
+          <Col xs={8} sm={5} md={3} className="order-first order-md-0">
             <img className="img-fluid" src={ibmLogo} alt="IBM logo" />
           </Col>
         </Row>
@@ -149,7 +149,7 @@ function Portfolio() {
               I built over 20 machine learning models in Python using libraries like TensorFlow, scikit-learn, Keras, and GloVe, and led 10 AI projects with social good applications, from assessing bias in the justice system to detecting pneumonia from X-ray scans.
             </p>
           </Col>
-          <Col xs={8} sm={5} md={{ span: 3, order: 'first' }}>
+          <Col xs={8} sm={5} md={3} className="order-first">
             <img className="img-fluid" src={inspiritAiLogo} alt="Inspirit AI logo" />
           </Col>
         </Row>
@@ -165,7 +165,7 @@ function Portfolio() {
         used to decide which features the engineering teams should prioritize next to best meet the needs of journalists and advance their work.
         </p>
         </Col>
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className="order-first order-md-0">
         <Container>
         <img
             className="d-block mx-auto w-100"
@@ -188,7 +188,7 @@ function Portfolio() {
             </p>
             <p>I've created a Humans of Stanford page where Stanford students would be highlighted for their contributions to the community and a new pull quote feature.</p>
             </Col>
-            <Col xs={12} md={6} className="order-md-first">
+            <Col xs={12} md={6} className="order-first">
             <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '881 / 1371'}}>
                 <Carousel.Item>
                 <img
@@ -221,7 +221,7 @@ function Portfolio() {
             <a href={"https://pupper.readthedocs.io/en/latest/"}>See Pupper Website Here</a> <br/>
             <a href={"https://www.youtube.com/playlist?list=PLxFq1fXvP5VTbxuMm4moAiG0zeOiPejZ6"}>Watch Pupper How-To YouTube Videos Here</a>
             </Col>
-            <Col xs={12} md={6} className="order-md-first">
+            <Col xs={12} md={6} className="order-first">
             <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '2196 / 1603'}}>
                 <Carousel.Item>
                 <img
@@ -259,7 +259,7 @@ function Portfolio() {
             A part of the Immigrant Art Expo will showcase in Cantor's Museum Night and Spring Arts Fair.
             </p>
             </Col>
-            <Col xs={12} md={6} className="order-md-first">
+            <Col xs={12} md={6} className="order-first">
             <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '1587 / 2245'}}>
                 <Carousel.Item>
                 <img
@@ -358,7 +358,7 @@ function Portfolio() {
                 Queer Salam and the Queer Resources Center held a debrief after Blair Imani's talk.</p>
                 <a href={"https://stanforddaily.com/2020/11/10/black-lives-matter-co-founder-opal-tometi-says-structural-change-is-essential-for-black-liberation/"}>Read Stanford Daily article written on the Opal Tometi event.</a>
         </Col>
-        <Col xs={12} md={6} className="order-md-first">
+        <Col xs={12} md={6} className="order-first">
         <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '205 / 266'}}>
             <Carousel.Item>
             <img
@@ -406,7 +406,7 @@ function Portfolio() {
                 We also welcomed Erika Andiola, Chief Advocacy Officer for the Refugee and Immigrant Center for Education and Legal Services (RAICES), and El Centro Chicano y Latino hosted a Q&A after her talk.
                 </p>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={6} className="order-first order-md-0">
             <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '409 / 531'}}>
                 <Carousel.Item>
                 <img
@@ -466,7 +466,7 @@ function Portfolio() {
             </p>
             <a href={"https://stanforddaily.com/2020/08/26/letter-to-the-community-undocumented-students-are-hurting/"}>Read the Article Here</a>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={6} className="order-first order-md-0">
             <img
                 className="d-block w-100"
                 src={undocumentedarticle}
@@ -483,7 +483,7 @@ function Portfolio() {
             advocacy and legal aid organization, and translated refugee's stories to help lawyers complete the Form I-589, Application for Asylum and for
             Withholding of Removal, during the Remain in Mexico Policy.</p>
         </Col>
-        <Col xs={12} md={6} className="order-md-first">
+        <Col xs={12} md={6} className="order-first">
         <Container>
         <img
             className="d-block mx-auto w-100"
@@ -509,7 +509,7 @@ function Portfolio() {
             In addition, I completed a country conditions research project, translated hundreds of legal documents, and worked daily with clients, scheduling appointments and answering legal questions under the guidance of a lawyer.
         </p>
         </Col>
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className="order-first order-md-0">
         <img
             className="d-block w-100"
             src={iiba}
@@ -523,7 +523,7 @@ function Portfolio() {
             <p>Quoted in 2020 Liman Center Annual Report</p>
             <a href={"https://law.yale.edu/sites/default/files/area/center/liman/2020_the_liman_center_reports.pdf"}>Read the Full Report Here</a>
           </Col>
-          <Col xs={12} className="order-md-first">
+          <Col xs={12} className="order-first">
             <img
                 className="d-block w-100"
                 src={limanquote}

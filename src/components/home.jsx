@@ -30,8 +30,11 @@ function Home() {
             As the former Policy Discussions Co-Director in Stanford in Government, Abi organized more than 20 university clubs to bring Ayọ Tometi, Black Lives Matter Co-Founder, and Blair Imani, critically-acclaimed historian, to encourage discussion for racial justice.
             In her spare time, she enjoys reading novels, painting colorful pieces, and discovering new music.
             </p>
+            <p>
+                For job opportunities or collaborations, feel free to <a href="mailto:abiclopez1@gmail.com">email me</a> or <a href="https://www.linkedin.com/in/abilxpez/">connect on LinkedIn</a>.
+            </p>
             </Col>
-            <Col xs={12} md={6} className="order-md-first">
+            <Col xs={12} md={6} className="order-first">
                 <img className="img-fluid rounded"
                     src={abipic}
                     alt="Abi Lopez"

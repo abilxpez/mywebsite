@@ -31,7 +31,7 @@ function Art() {
                 In the words of my brother, Alan Lopez. 
                 </Card.Text>
                 </Card.Body>
-                <Card.Img className="order-md-first" src={secretheaven2} alt="Painting of blue and green river" />
+                <Card.Img className="order-first" src={secretheaven2} alt="Painting of blue and green river" />
             </Card>
             </Col>
             <Col xs={12} md={6}>
@@ -46,7 +46,7 @@ function Art() {
                 It's an American dream come true for my dad and our family.
                 </Card.Text>
                 </Card.Body>
-                <Card.Img className="order-md-first" src={suenosalatardecer} alt="Painting of Los Angeles Sunset" />
+                <Card.Img className="order-first" src={suenosalatardecer} alt="Painting of Los Angeles Sunset" />
             </Card>
             </Col>
         </Row>
@@ -60,7 +60,7 @@ function Art() {
         self-love, self-center, and perseverance.
         </Card.Text>
         </Card.Body>
-        <Card.Img className="order-md-first" src={toujoursici} alt="Sketch of twos Abi's embracing" />
+        <Card.Img className="order-first" src={toujoursici} alt="Sketch of twos Abi's embracing" />
     </Card>
         <Row className="align-items-center my-5 g-4">
             <Col xs={12} md={6}>
@@ -71,7 +71,7 @@ function Art() {
 
             </p>
             </Col>
-            <Col xs={12} md={6} className="order-md-first">
+            <Col xs={12} md={6} className="order-first">
             <Carousel variant="dark" className="fixed-frame-carousel mx-auto" style={{maxWidth: 500, '--slide-aspect-ratio': '4 / 5'}}>
                 <Carousel.Item>
                 <img
